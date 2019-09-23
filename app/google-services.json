@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "678952469834",
+    "firebase_url": "https://eservice-79e2c.firebaseio.com",
+    "project_id": "eservice-79e2c",
+    "storage_bucket": "eservice-79e2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678952469834:android:eed9a8f5b2b5f1ac",
+        "android_client_info": {
+          "package_name": "com.test.quickyfox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678952469834-qsqjsvvra053d3cd8m3bpebmagt4s588.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFY6jfWNwxviTGt1iJlQFN3zvxQ0cK7mg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678952469834-qsqjsvvra053d3cd8m3bpebmagt4s588.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

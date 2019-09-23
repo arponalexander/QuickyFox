@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AliceBlue"
+    tools:context=".ServiceProvider.SellerLoginActivity">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="15dp">
+
+       <ImageView
+           android:id="@+id/img_seller"
+           android:layout_width="match_parent"
+           android:layout_height="170dp"
+           android:scaleType="fitCenter"
+           android:src="@drawable/foxspash" />
+
+       <TextView
+           android:id="@+id/text_seller_login_email"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Email:"
+           android:layout_marginTop="20dp"
+           android:layout_below="@+id/img_seller"
+           android:textSize="18sp"/>
+
+       <EditText
+           android:id="@+id/seller_login_email"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_marginTop="5dp"
+           android:layout_below="@+id/text_seller_login_email"
+           android:hint="Email Address"
+           android:textSize="17dp"
+           android:inputType="textEmailAddress"
+           />
+
+       <TextView
+           android:id="@+id/text_seller_login_password"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Password:"
+           android:layout_marginTop="10dp"
+           android:layout_below="@+id/seller_login_email"
+           android:textSize="18sp"/>
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/text_seller_login_password"
+           android:layout_centerHorizontal="true"
+           android:layout_centerVertical="true"
+           android:id="@+id/passwordTIL"
+           app:passwordToggleEnabled="true">
+
+           <EditText
+               android:id="@+id/seller_login_password"
+               android:inputType="textPassword"
+               android:hint="Password"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+       </com.google.android.material.textfield.TextInputLayout>
+    <!--   <EditText
+
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_marginTop="5dp"
+
+           android:hint="Password"
+           android:textSize="17sp"
+           android:inputType="textPassword"
+           />-->
+
+       <LinearLayout
+           android:id="@+id/linear_layout_seller"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/passwordTIL"
+           android:layout_marginTop="5dp"
+
+           >
+       <com.rey.material.widget.CheckBox
+           android:id="@+id/remember_me_chkb_seller"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           style="@style/Material.Drawable.CheckBox"
+           android:text="Remember me"
+           app:cbd_strokeColor="@color/grey_font"
+           android:gravity="center_vertical"
+           android:textSize="16sp"
+          >
+
+       </com.rey.material.widget.CheckBox>
+
+       </LinearLayout>
+
+       <TextView
+           android:id="@+id/seller_login_resetpassword"
+           android:layout_width="158dp"
+           android:layout_height="33dp"
+           android:layout_below="@+id/passwordTIL"
+           android:layout_marginLeft="235dp"
+           android:layout_marginBottom="10dp"
+           android:layout_marginTop="5dp"
+           android:text="Forgot password?"
+           android:textSize="13sp" />
+
+       <Button
+           android:id="@+id/seller_login_btn"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/linear_layout_seller"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="10dp"
+           android:text="Login"
+           android:textAllCaps="false"
+           android:textSize="20dp"
+           android:background="@drawable/shadow_linear"
+           android:padding="5dp"/>
+
+       <TextView
+           android:id="@+id/register_seller_txtView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="170dp"
+           android:text="Wanna be a Service Provider?"
+           android:textSize="15dp"
+           android:layout_below="@+id/seller_login_btn"
+           />
+
+   </RelativeLayout>
+
+</RelativeLayout>

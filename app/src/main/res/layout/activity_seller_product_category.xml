@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceProvider.SellerProductCategoryActivity">
+
+    <TextView
+
+        android:id="@+id/slogan_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Add New Service"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/linear_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/slogan_category"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/carpentry_service"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/carpentry"
+        />
+
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/cleaning_service"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/cleaning" />
+
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/construction_service"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/construction" />
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/electrical_service"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/electrical" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/linear_category_layout"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/grocery_helper_service"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/grocery_help"
+            />
+
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/laundry_service"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/laundry" />
+
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/maintenance_service"
+            android:layout_width="64dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/maintenance" />
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/mover_service"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/mover" />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/linear2_category_layout"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/pest_control_service"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/pest_control"
+            />
+
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/plumbing_service"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/plumbing" />
+
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/aircon_service"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/aircon" />
+        <ImageView
+            android:background="@drawable/shadow_linear"
+            android:padding="5dp"
+            android:id="@+id/dish_cleaning_service"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/dish_cleaning" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

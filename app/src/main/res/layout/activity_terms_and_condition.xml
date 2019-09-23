@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_layout_terms"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buyers.TermsAndConditionActivity"
+    android:background="@color/AliceBlue">
+
+    <ImageView
+        android:id="@+id/img_terms_and_condition"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="100dp"
+        android:src="@drawable/qfox">
+    </ImageView>
+
+
+        <TextView
+            android:id="@+id/txt_accept_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accept_terms_and_conditions"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/img_terms_and_condition"
+            >
+
+        </TextView>
+
+    <ScrollView
+        android:background="@drawable/shadow_linear"
+        android:padding="5dp"
+        android:id="@+id/scroll_view_terms_and_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_accept_terms"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <org.sufficientlysecure.htmltextview.HtmlTextView
+            android:id="@+id/html_terms_and_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp">
+
+        </org.sufficientlysecure.htmltextview.HtmlTextView>
+
+    </ScrollView>
+
+
+</RelativeLayout>

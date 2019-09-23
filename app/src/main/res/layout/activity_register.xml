@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buyers.RegisterActivity"
+    android:background="@color/AliceBlue">
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="@drawable/shadow_linear"
+        android:padding="2dp"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/register_username_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_name_text"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Full Name"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="17sp"
+
+                />
+
+            <EditText
+                android:id="@+id/register_phone_number_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_phone_number_text"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="15dp"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="17sp"
+                app:et_helper="Phone number should be in the form of 09XXXXXXXXX" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/password_text_register"
+                android:layout_below="@+id/register_password_text"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/register_password_input"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="17sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/password_confirm_register"
+                android:layout_below="@+id/register_confirm_password_text"
+                app:passwordToggleEnabled="true"
+                >
+
+                <EditText
+                    android:id="@+id/register_confirm_password_input"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="17sp"
+                    android:hint="Confirm Password"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <ImageView
+                android:id="@+id/register_Applogo"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/foxicon" />
+
+            <TextView
+                android:id="@+id/register_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_Applogo"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Full Name:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/register_phone_number_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_username_input"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Phone number:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/register_password_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_phone_number_input"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Password:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/register_confirm_password_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_text_register"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Confirm Password:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+            <LinearLayout
+                android:id="@+id/linear_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/password_confirm_register">
+            <CheckBox
+                android:id="@+id/checkbox_terms_and_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="I hereby Read and Accept the"
+                >
+            </CheckBox>
+                <TextView
+                    android:id="@+id/txt_terms_and_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Terms and Conditions"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/holo_blue_dark">
+
+                </TextView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/register_btn"
+                android:layout_width="383dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/linear_register"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shadow_linear"
+                android:padding="20dp"
+                android:text="Create Account"
+                android:textAllCaps="false"
+
+                android:textSize="18sp" />
+
+            </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="7dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/service_image_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="2dp"
+                android:scaleType="fitCenter"
+
+                />
+
+            <TextView
+                android:id="@+id/text_service_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/service_image_maintain"
+                android:text="Service Name: "
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:padding="12dp"
+                />
+            <EditText
+                android:id="@+id/service_name_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_service_name"
+                android:textColorHint="@android:color/black"
+                android:hint="Service Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:background="@drawable/input_design"
+                android:padding="12dp"
+                android:textStyle="italic"
+                />
+
+            <TextView
+                android:id="@+id/text_service_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/service_name_maintain"
+                android:text="Service Price: "
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:padding="12dp"
+                />
+            <EditText
+                android:id="@+id/service_price_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_service_price"
+                android:textColorHint="@android:color/black"
+                android:hint="Service Price"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:inputType="number"
+                android:background="@drawable/input_design"
+                android:padding="12dp"
+                android:textStyle="italic"
+                />
+            <TextView
+                android:id="@+id/text_service_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/service_price_maintain"
+                android:text="Service Description: "
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:padding="12dp"
+                />
+
+            <EditText
+                android:id="@+id/service_description_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_service_description"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/input_design"
+                android:hint="Product Description"
+                android:padding="12dp"
+                android:textColorHint="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/apply_service_changes_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/service_description_maintain"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/buttons"
+                android:text="Apply Changes"
+                android:padding="12dp"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                />
+            <Button
+                android:id="@+id/delete_service_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apply_service_changes_btn"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/buttons"
+                android:text="Delete Product"
+                android:padding="12dp"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

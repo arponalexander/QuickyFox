@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceProvider.SellerRegistrationActivity"
+    android:background="@color/AliceBlue">
+
+    <androidx.core.widget.NestedScrollView
+        android:background="@drawable/shadow_linear"
+        android:padding="5dp"
+        android:id="@+id/scroll_view_seller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+            <ImageView
+                android:id="@+id/img_seller"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/foxspash" />
+
+        <TextView
+            android:id="@+id/text_seller_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Name:"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/img_seller"
+            android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/seller_name"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_below="@+id/text_seller_name"
+                android:hint="Service Provider name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="17dp"
+                android:inputType="text"
+                />/
+
+            <TextView
+                android:id="@+id/text_seller_phone"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Phone number:"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/seller_name"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/seller_phone"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/text_seller_phone"
+                android:hint="Phone number"
+                android:textSize="17dp"
+                android:inputType="phone"
+                />
+
+            <TextView
+                android:id="@+id/text_seller_email"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Email:"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/seller_phone"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/seller_email"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_below="@+id/text_seller_email"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Email"
+                android:textSize="17dp"
+                android:inputType="textEmailAddress"
+                />
+            <TextView
+                android:id="@+id/text_seller_address"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Shop address:"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/seller_email"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/seller_address"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_below="@+id/text_seller_address"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Address"
+                android:textSize="17dp"
+                android:inputType="text"
+                />
+            <TextView
+                android:id="@+id/text_seller_password"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Password:"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/seller_address"
+                android:textSize="18sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/seller_register_password"
+                android:layout_below="@+id/text_seller_password"
+                app:passwordToggleEnabled="true"
+                >
+
+                <EditText
+                    android:id="@+id/seller_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Password"
+                    android:textSize="17dp"
+                    android:inputType="textPassword"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_register_seller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/seller_register_password">
+                <CheckBox
+                    android:id="@+id/checkbox_terms_and_condition_seller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="I hereby Read and Accept the"
+                    >
+                </CheckBox>
+                <TextView
+                    android:id="@+id/txt_terms_and_condition_seller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Terms and Conditions"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/holo_blue_dark">
+
+                </TextView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/seller_registration_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_register_seller"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shadow_linear"
+                android:padding="5dp"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+</RelativeLayout>

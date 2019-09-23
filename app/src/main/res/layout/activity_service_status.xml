@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buyers.ServiceStatus.ServiceStatusActivity">
+
+    <RelativeLayout
+        android:id="@+id/tabbed_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image_service_status"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/profile"
+                app:civ_border_width="2dp"
+                android:layout_gravity="center"
+                app:civ_border_color="@android:color/white"
+
+                />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Services"
+            android:layout_marginTop="3dp"
+          android:layout_marginLeft="60dp"
+            android:textSize="25sp"
+            android:textColor="@android:color/black"
+           >
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabGravity="fill"
+        android:id="@+id/tablayout_service_status"
+        android:layout_below="@+id/tabbed_bar">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tablayout_service_status"
+        android:id="@+id/viewpager_1">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

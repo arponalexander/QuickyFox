@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item android:title="Home"
+        android:id="@+id/home_nav_seller"
+        android:icon="@drawable/home"
+        android:iconTint="@color/SmokeWhite"/>
+    <item android:title="Add"
+        android:id="@+id/add_service_nav_seller"
+        android:icon="@drawable/service"
+        android:iconTint="@color/SmokeWhite"/>
+    <item android:title="Chat"
+        android:id="@+id/chat_nav_seller"
+        android:icon="@drawable/ic_chat"
+        android:iconTint="@color/SmokeWhite"
+        />
+    <item android:title="Logout"
+        android:id="@+id/logout_nav_seller"
+        android:icon="@drawable/logout_seller"
+        android:iconTint="@color/SmokeWhite"/>
+</menu>
