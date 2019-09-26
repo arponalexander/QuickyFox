@@ -15,6 +15,16 @@
         android:background="@color/colorPrimaryDark"
         android:layout_alignParentTop="true">
 
+        <ImageView
+            android:id="@+id/back_service"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_back">
+
+        </ImageView>
+
         <TextView
             android:id="@+id/bar_title_4"
             android:layout_width="match_parent"

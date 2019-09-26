@@ -1,10 +1,12 @@
 package com.test.quickyfox.Buyers;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.test.quickyfox.Buyers.Categories.AirconServiceActivity;
@@ -21,23 +23,26 @@ import com.test.quickyfox.Buyers.Categories.PestControlServicesActivity;
 import com.test.quickyfox.Buyers.Categories.PlumbingServicesActivity;
 import com.test.quickyfox.R;
 
-public class CategoriesActivity extends AppCompatActivity {
+public class CategoriesActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private LinearLayout cleaningServices, contstructionServices, electricalServices, carpentryServices, groceryHelperServices, laundryServices,
-                        mainetnanceServices,moverServices, pestControlServices, plumbingServices, airconServices,dishcleaningServices;
+    private CardView cleaningServices, contstructionServices, electricalServices, carpentryServices, groceryHelperServices, laundryServices,
+            maintenanceServices,moverServices, pestControlServices, plumbingServices, airconServices,dishcleaningServices;
 
+    private ImageView back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
 
-        cleaningServices =findViewById(R.id.cleaning_service_categories);
+        back = findViewById(R.id.back_categories);
+
+        cleaningServices = findViewById(R.id.cleaning_service_categories);
         contstructionServices = findViewById(R.id.construction_service_categories);
         electricalServices = findViewById(R.id.electrical_service_categories);
         carpentryServices = findViewById(R.id.carpentry_service_categories);
         groceryHelperServices = findViewById(R.id.grocery_helper_service_categories);
         laundryServices = findViewById(R.id.laundry_service_categories);
-        mainetnanceServices = findViewById(R.id.maintenance_service_categories);
+        maintenanceServices = findViewById(R.id.maintenance_service_categories);
         moverServices = findViewById(R.id.mover_service_categories);
         pestControlServices = findViewById(R.id.pest_control_service_categories);
         plumbingServices = findViewById(R.id.plumbing_service_categories);
@@ -87,7 +92,6 @@ public class CategoriesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         groceryHelperServices.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -98,7 +102,6 @@ public class CategoriesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         laundryServices.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -110,7 +113,7 @@ public class CategoriesActivity extends AppCompatActivity {
             }
         });
 
-        mainetnanceServices.setOnClickListener(new View.OnClickListener()
+        maintenanceServices.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -170,6 +173,21 @@ public class CategoriesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        back.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(CategoriesActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    @Override
+    public void onClick(View view) {
 
     }
 }

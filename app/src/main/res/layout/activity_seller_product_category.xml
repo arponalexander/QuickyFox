@@ -139,7 +139,7 @@
             android:background="@drawable/shadow_linear"
             android:padding="5dp"
             android:id="@+id/pest_control_service"
-            android:layout_width="80dp"
+            android:layout_width="64dp"
             android:layout_height="80dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/pest_control"
@@ -149,7 +149,7 @@
             android:background="@drawable/shadow_linear"
             android:padding="5dp"
             android:id="@+id/plumbing_service"
-            android:layout_width="wrap_content"
+            android:layout_width="64dp"
             android:layout_height="80dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
@@ -159,7 +159,7 @@
             android:background="@drawable/shadow_linear"
             android:padding="5dp"
             android:id="@+id/aircon_service"
-            android:layout_width="80dp"
+            android:layout_width="64dp"
             android:layout_height="80dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -168,13 +168,30 @@
             android:background="@drawable/shadow_linear"
             android:padding="5dp"
             android:id="@+id/dish_cleaning_service"
-            android:layout_width="80dp"
+            android:layout_width="64dp"
             android:layout_height="80dp"
             android:layout_marginLeft="10dp"
             android:src="@drawable/dish_cleaning" />
 
     </LinearLayout>
 
+  <!--  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_bar_seller_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemBackground="@color/SmokeWhite"
+            app:itemIconTint="@color/colorPrimary"
+            app:menu="@menu/nav_items">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </LinearLayout>
+-->
 
 
 </RelativeLayout>

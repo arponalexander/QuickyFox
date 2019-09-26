@@ -10,12 +10,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
+import com.test.quickyfox.Buyers.CategoriesActivity;
 import com.test.quickyfox.Buyers.ProductDetailsActivity;
 import com.test.quickyfox.Model.Products;
 import com.test.quickyfox.R;
@@ -26,20 +28,30 @@ public class AirconServiceActivity extends AppCompatActivity
     private DatabaseReference ProductsRef;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
-
+    private ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aircon_service);
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
-
-
         recyclerView = findViewById(R.id.recycler_aircon_services);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         /*recyclerView.setLayoutManager(new GridLayoutManager(this,2));*/
         recyclerView.setLayoutManager(layoutManager);
+
+        back = findViewById(R.id.back_service);
+
+        back.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(AirconServiceActivity.this, CategoriesActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     protected void onStart()
@@ -88,7 +100,6 @@ public class AirconServiceActivity extends AppCompatActivity
                         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
                         ProductViewHolder holder = new ProductViewHolder(view);
                         return  holder;
-
 
                     }
                 };

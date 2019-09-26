@@ -243,9 +243,13 @@ public class SettingsActivity extends AppCompatActivity
 
             uploadTask = fileRef.putFile(imageUri);
 
+
+
             uploadTask.continueWithTask(new Continuation()
             {
                 @Override
+                @SuppressWarnings("unchecked") //delete if error occur
+
                 public Object then(@NonNull Task task) throws Exception
                 {
                     if(!task.isSuccessful())

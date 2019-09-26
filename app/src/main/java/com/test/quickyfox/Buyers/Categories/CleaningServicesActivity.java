@@ -6,10 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -18,6 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 import com.test.quickyfox.Admin.AdminMaintainProductsActivity;
+import com.test.quickyfox.Buyers.CategoriesActivity;
 import com.test.quickyfox.Buyers.HomeActivity;
 import com.test.quickyfox.Buyers.ProductDetailsActivity;
 import com.test.quickyfox.Model.Products;
@@ -30,7 +33,7 @@ public class CleaningServicesActivity extends AppCompatActivity {
     private DatabaseReference ProductsRef;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
-
+    private ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,20 @@ public class CleaningServicesActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         /*recyclerView.setLayoutManager(new GridLayoutManager(this,2));*/
         recyclerView.setLayoutManager(layoutManager);
+
+        back = findViewById(R.id.back_service);
+
+        back.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(CleaningServicesActivity.this, CategoriesActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
     @Override
     protected void onStart()
     {

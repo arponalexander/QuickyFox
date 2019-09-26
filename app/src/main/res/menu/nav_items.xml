@@ -19,5 +19,6 @@
     <item android:title="Logout"
         android:id="@+id/logout_nav_seller"
         android:icon="@drawable/logout_seller"
-        android:iconTint="@color/SmokeWhite"/>
+        android:iconTint="@color/SmokeWhite"
+        />
 </menu>

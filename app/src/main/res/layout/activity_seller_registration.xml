@@ -141,6 +141,7 @@
                 android:id="@+id/seller_register_password"
                 android:layout_below="@+id/text_seller_password"
                 app:passwordToggleEnabled="true"
+
                 >
 
                 <EditText

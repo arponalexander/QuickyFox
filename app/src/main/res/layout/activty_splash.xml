@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/SmokeWhite"
->
+    >
     <ImageView
         android:id="@+id/app_logo_splash"
         android:layout_width="match_parent"
@@ -12,17 +11,35 @@
         android:layout_marginTop="150dp"
         android:src="@drawable/qfox"/>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="112dp"
+    <LinearLayout
+        android:id="@+id/app_loading"
+        android:layout_below="@+id/app_logo_splash"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="22dp"
-        />
+        android:layout_centerHorizontal="true">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/loading"
+            android:layout_marginTop="180dp"
+            />
+
+    </LinearLayout>
+
+
+
+    <!-- <ProgressBar
+         android:id="@+id/progressBar"
+         style="?android:attr/progressBarStyleHorizontal"
+         android:layout_width="112dp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentStart="true"
+         android:layout_alignParentEnd="true"
+         android:layout_alignParentBottom="true"
+         android:layout_marginStart="150dp"
+         android:layout_marginEnd="150dp"
+         android:layout_marginBottom="22dp"
+         />-->
 
 </RelativeLayout>
