@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     private String parentDbName = "Users";
     private CheckBox chkBoxRememberMe;
     private ImageView AdminLink;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -212,7 +214,9 @@ public class LoginActivity extends AppCompatActivity {
 
                         }
                     }
-                } else {
+                }
+                else
+                    {
                     Toast.makeText(LoginActivity.this, "Account with this phone number " + phone + " does not exist", Toast.LENGTH_SHORT).show();
                     loadingbar.dismiss();
                 }
@@ -224,6 +228,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
 
 }

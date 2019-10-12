@@ -6,26 +6,22 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
-import com.test.quickyfox.Admin.AdminMaintainProductsActivity;
 import com.test.quickyfox.Buyers.CategoriesActivity;
-import com.test.quickyfox.Buyers.HomeActivity;
 import com.test.quickyfox.Buyers.ProductDetailsActivity;
 import com.test.quickyfox.Model.Products;
 import com.test.quickyfox.R;
-import com.test.quickyfox.ViewHolder.ProductViewHolder;
+import com.test.quickyfox.ViewHolder.ServiceViewHolder;
 
 public class CleaningServicesActivity extends AppCompatActivity {
 
@@ -72,16 +68,17 @@ public class CleaningServicesActivity extends AppCompatActivity {
                         .setQuery(ProductsRef.orderByChild("Category").equalTo("Cleaning Services"), Products.class)
                         .build();
 
-        FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
-                new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
+        FirebaseRecyclerAdapter<Products, ServiceViewHolder> adapter =
+                new FirebaseRecyclerAdapter<Products, ServiceViewHolder>(options) {
                     @Override
-                    protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Products model)
+                    protected void onBindViewHolder(@NonNull ServiceViewHolder holder, int position, @NonNull final Products model)
                     {
 
                         holder.txtProductName.setText(model.getPname());
                         /*holder.txtProductDescription.setText(model.getDescription());*/
                         holder.txtProductPrice.setText("₱" + model.getPrice());
                        /* holder.txtProductCategory.setText("Category: " + model.getCategory());*/
+                        holder.txtProductSeller.setText("Provider: " + model.getSellerName());
                         Picasso.get().load(model.getImage()).into(holder.imageView);
 
 
@@ -104,10 +101,10 @@ public class CleaningServicesActivity extends AppCompatActivity {
 
                     @NonNull
                     @Override
-                    public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+                    public ServiceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
                     {
-                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
-                        ProductViewHolder holder = new ProductViewHolder(view);
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.service_items_layout_list, parent, false);
+                        ServiceViewHolder holder = new ServiceViewHolder(view);
                         return  holder;
 
 

@@ -61,6 +61,7 @@ public class AdminNewOrderActivity extends AppCompatActivity
                         holder.userShippingAddress.setText("Shipping Address: " + model.getAddress() + " " + model.getCity());
 
 
+
                         holder.ShowOrdersBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view)

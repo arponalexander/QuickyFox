@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.test.quickyfox.Interface.ItemClickListener;
 import com.test.quickyfox.R;
 
-public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
+public class ServiceProviderItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
 {
 
     public TextView txtProductName, txtProductDescription, txtProductPrice, txtProductSeller,txtProductCategory, txtProductStatus;
@@ -18,7 +18,7 @@ public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     public  ItemClickListener listener;
 
 
-    public ItemViewHolder(@NonNull View itemView)
+    public ServiceProviderItemViewHolder(@NonNull View itemView)
     {
         super(itemView);
 

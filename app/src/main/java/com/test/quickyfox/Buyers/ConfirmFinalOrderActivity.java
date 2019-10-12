@@ -26,7 +26,7 @@ import java.util.HashMap;
 
 public class ConfirmFinalOrderActivity extends AppCompatActivity {
 
-    private EditText nameEditText, phoneEditText, addressEditText, cityEditText;
+    private EditText nameEditText, phoneEditText, addressEditText, cityEditText, noteEditText;
     private Button confirmOrderBtn;
 
     private String totalAmount = "";
@@ -45,6 +45,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         phoneEditText = (EditText) findViewById(R.id.shipment_phone_number);
         addressEditText = (EditText) findViewById(R.id.shipment_address);
         cityEditText = (EditText) findViewById(R.id.shipment_city);
+        noteEditText = findViewById(R.id.shipment_note);
 
         confirmOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +101,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         ordersMap.put("phone", phoneEditText.getText().toString());
         ordersMap.put("address", addressEditText.getText().toString());
         ordersMap.put("city", cityEditText.getText().toString());
+        ordersMap.put("note",noteEditText.getText().toString());
         ordersMap.put("date", saveCurrentDate);
         ordersMap.put("time", saveCurrentTime);
         ordersMap.put("state", "not shipped");

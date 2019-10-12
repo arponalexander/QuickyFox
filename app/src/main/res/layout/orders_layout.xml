@@ -16,7 +16,7 @@
             android:id="@+id/order_user_name"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:text="Username: "
             android:textColor="@android:color/black"
             android:textSize="15dp"
@@ -29,7 +29,7 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
             android:text="Phone Number: "
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:text="Total Price: "
             android:textColor="@android:color/black"
             android:textStyle="bold"
@@ -55,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:text="City Address "
         android:textColor="@android:color/black"
         android:textStyle="bold"
@@ -67,14 +67,30 @@
             android:id="@+id/order_date_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:text="Date and Time "
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:textSize="14dp"
             android:layout_below="@+id/order_address_city"
             android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/order_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:text="Note:"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:layout_below="@+id/order_date_time"
+            >
+
+        </TextView>
+
 
         <Button
             android:id="@+id/show_all_products_btn"
@@ -89,7 +105,7 @@
             android:textColor="@color/colorPrimaryDark"
             android:background="@drawable/shadow_linear"
             android:textAllCaps="false"
-            android:layout_below="@+id/order_date_time"
+            android:layout_below="@+id/order_note"
             />
 
 

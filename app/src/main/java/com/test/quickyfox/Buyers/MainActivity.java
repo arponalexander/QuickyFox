@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -33,12 +34,14 @@ public class MainActivity extends AppCompatActivity {
     private Button joinNowButton, loginButton;
     private ProgressDialog loadingbar;
     private TextView sellerBegin;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         joinNowButton = (Button)findViewById(R.id.main_join_now_btn);
         loginButton = (Button)findViewById(R.id.main_login_btn);

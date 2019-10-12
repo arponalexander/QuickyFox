@@ -41,12 +41,12 @@ public class ProductDetailsActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_details);
+        setContentView(R.layout.activity_service_details);
 
         productID = getIntent().getStringExtra("pid");
 
         addToCartBtn = (Button) findViewById(R.id.pd_add_to_cart_btn);
-        /*numberButton = (ElegantNumberButton) findViewById(R.id.number_btn);*/
+        numberButton = (ElegantNumberButton) findViewById(R.id.number_btn);
         productImage = (ImageView) findViewById(R.id.product_image_details);
         productName = (TextView) findViewById(R.id.product_name_details);
         productDescription = (TextView) findViewById(R.id.product_description_details);
@@ -105,7 +105,7 @@ public class ProductDetailsActivity extends AppCompatActivity
         cartMap.put("category",productCategory.getText().toString());
         cartMap.put("date",saveCurrentDate);
         cartMap.put("time",saveCurrentTime);
-        /*cartMap.put("quantity",numberButton.getNumber());*/
+        cartMap.put("quantity",numberButton.getNumber());
         cartMap.put("discount", "");
 
         cartListRef.child("User View").child(Prevalent.currentOnlineUser.getPhone())

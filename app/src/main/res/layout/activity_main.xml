@@ -10,41 +10,25 @@
     <ImageView
         android:id="@+id/logo_vertical"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="34dp"
         android:layout_marginTop="45dp"
         android:layout_marginEnd="36dp"
-        android:src="@drawable/qfox"
+        android:src="@drawable/foxworklogo"
         />
 
     <Button
-        android:id="@+id/main_join_now_btn"
+        android:id="@+id/main_login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/main_login_btn"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="230dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/input_design"
-        android:padding="18dp"
-        android:text="Sign Up"
-        android:textAllCaps="false"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/main_login_btn"
-        android:layout_width="381dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/logo_vertical"
+        android:layout_marginTop="120dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="102dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/input_design"
         android:padding="18dp"
         android:text="Sign In"
@@ -52,15 +36,30 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp" />
 
+    <Button
+        android:id="@+id/main_join_now_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_login_btn"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/buttons"
+        android:padding="18dp"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+
     <TextView
         android:id="@+id/seller_begin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="70dp"
-        android:text="Q-fox Service Provider"
+        android:text="FOX Work Service Provider"
 
         android:textSize="16dp" />
 

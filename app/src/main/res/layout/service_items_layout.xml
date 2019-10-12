@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:outlineSpotShadowColor="@color/colorPrimaryDark"
+    app:cardElevation="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/SmokeWhite">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_linear"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_image"
+            android:text="Service Name: "
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name"
+            android:text="Service Price: "
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

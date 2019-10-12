@@ -11,6 +11,11 @@
         android:id="@+id/add_service_nav_seller"
         android:icon="@drawable/service"
         android:iconTint="@color/SmokeWhite"/>
+    <item android:title="Add"
+        android:id="@+id/Add_nav_seller"
+        android:icon="@drawable/add"
+        android:iconTint="@color/SmokeWhite"
+        />
     <item android:title="Chat"
         android:id="@+id/chat_nav_seller"
         android:icon="@drawable/ic_chat"

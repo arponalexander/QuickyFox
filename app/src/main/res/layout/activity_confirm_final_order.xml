@@ -49,13 +49,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/shipment_name"
-        android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="1dp"
         android:layout_marginRight="20dp"
-        android:textSize="17sp"
         android:text="Contact info: "
-        >
-    </TextView>
+        android:textSize="17sp"></TextView>
 
     <EditText
         android:id="@+id/shipment_phone_number"
@@ -113,6 +111,30 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="City Name"
+        />
+
+    <TextView
+        android:id="@+id/shipment_note_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shipment_city"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="17sp"
+        android:text="Special Instruction: "
+        >
+    </TextView>
+
+    <EditText
+        android:id="@+id/shipment_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shipment_note_txt"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Special instructions"
         />
 
     <Button

@@ -12,7 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.test.quickyfox.Interface.ItemClickListener;
 import com.test.quickyfox.R;
 
-public class ProductViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
+public class ServiceViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
 {
 
     public TextView txtProductName, txtProductDescription, txtProductPrice, txtProductSeller,txtProductCategory;
@@ -20,7 +20,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder implements View.O
     public  ItemClickListener listener;
 
 
-    public ProductViewHolder(@NonNull View itemView)
+    public ServiceViewHolder(@NonNull View itemView)
     {
         super(itemView);
 
@@ -28,7 +28,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder implements View.O
         txtProductName = itemView.findViewById(R.id.product_name);
         txtProductDescription =itemView.findViewById(R.id.product_description);
         txtProductPrice = itemView.findViewById(R.id.product_price);
-        txtProductSeller = itemView.findViewById(R.id.product_seller_details);
+        txtProductSeller = itemView.findViewById(R.id.product_seller);
         txtProductCategory=itemView.findViewById(R.id.product_category_details);
 
     }

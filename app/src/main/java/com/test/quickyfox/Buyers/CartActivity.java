@@ -54,6 +54,21 @@ public class CartActivity extends AppCompatActivity
         NextProcessBtn = (Button) findViewById(R.id.next_btn);
         txtTotalAmount = (TextView) findViewById(R.id.total_price);
         txtMsg1 = (TextView) findViewById(R.id.msg_1);
+
+        NextProcessBtn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+
+                txtTotalAmount.setText("Total Price = ₱" + (overTotalPrice));
+
+                Intent intent = new Intent (CartActivity.this, ConfirmFinalOrderActivity.class);
+                intent.putExtra("Total Price", String.valueOf(overTotalPrice));
+                startActivity(intent);
+                finish();
+            }
+        });
     }
     @Override
     protected  void onStart()
@@ -78,31 +93,19 @@ public class CartActivity extends AppCompatActivity
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model)
             {
-                /*holder.txtProductQuantity.setText("Quantity is = "+ model.getQuantity());*/
-                holder.txtProductPrice.setText("Price is = ₱" + model.getPrice());
+                holder.txtProductPrice.setText("Price: " + model.getPrice());
                 holder.txtProductName.setText("Service Name: " + model.getPname());
                 holder.txtProductCategory.setText("Service Category: " + model.getCategory());
                 holder.txtProductSellerName.setText("Service Provider: " + model.getSellerName());
+                holder.txtProductQuantity.setText("Number of hours: " + model.getQuantity());
 
-                int oneTypeProductTPrice = ((Integer.valueOf(model.getPrice())));
-                overTotalPrice = overTotalPrice + oneTypeProductTPrice;
-                String.valueOf(overTotalPrice);
+                /*int oneTypeProductTPrice = ((Integer.valueOf(model.getPrice())));
+                overTotalPrice = overTotalPrice + oneTypeProductTPrice;*/
 
-                NextProcessBtn.setOnClickListener(new View.OnClickListener()
-                {
-                    @Override
-                    public void onClick(View view)
-                    {
+                int oneTypeProductPrice = ((Integer.valueOf(model.getPrice()))) * Integer.valueOf(model.getQuantity());
+                overTotalPrice = overTotalPrice + oneTypeProductPrice;
 
-                        txtTotalAmount.setText("Total Price = ₱" + String.valueOf(overTotalPrice));
-
-                        Intent intent = new Intent (CartActivity.this, ConfirmFinalOrderActivity.class);
-                        intent.putExtra("Total Price", String.valueOf(overTotalPrice));
-                        startActivity(intent);
-                        finish();
-                    }
-                });
-                txtTotalAmount.setText("Total Price = ₱" + String.valueOf(overTotalPrice));
+                txtTotalAmount.setText("Total Price = ₱" + (overTotalPrice));
 
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {

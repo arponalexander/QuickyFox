@@ -1,14 +1,12 @@
 package com.test.quickyfox.Buyers;
 
 import android.content.Intent;
-import android.opengl.Visibility;
 import android.os.Bundle;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -28,22 +26,19 @@ import com.test.quickyfox.Buyers.ServiceStatus.ServiceStatusActivity;
 import com.test.quickyfox.Model.Products;
 import com.test.quickyfox.Prevalent.Prevalent;
 import com.test.quickyfox.R;
-import com.test.quickyfox.ViewHolder.ProductViewHolder;
+import com.test.quickyfox.ViewHolder.ServiceViewHolder;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.paperdb.Paper;
@@ -130,26 +125,27 @@ public class HomeActivity extends AppCompatActivity
 
         recyclerView = findViewById(R.id.recycler_menu);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        /*recyclerView.setLayoutManager(new GridLayoutManager(this,2));*/
         recyclerView.setLayoutManager(layoutManager);
+        /*layoutManager = new LinearLayoutManager(this);*/
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+
 
     }
     /*private void firebaseSearch(String searchText){
         Query firebaseSearchQuery = SearchRef.orderByChild("pname").startAt("searchText").endAt("searchText" +"\uf8ff");
 
-        FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
-                new FirebaseRecyclerAdapter<Products, ProductViewHolder> {
+        FirebaseRecyclerAdapter<Products, ServiceViewHolder> adapter =
+                new FirebaseRecyclerAdapter<Products, ServiceViewHolder> {
             Products.class,
                     R.layout.activity_home,
-                    ProductViewHolder.class,
+                    ServiceViewHolder.class,
                     firebaseSearchQuery
         }
         @Override
-        public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+        public ServiceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
         {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
-            ProductViewHolder holder = new ProductViewHolder(view);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.service_items_layout, parent, false);
+            ServiceViewHolder holder = new ServiceViewHolder(view);
             return  holder;
 
 
@@ -168,15 +164,15 @@ public class HomeActivity extends AppCompatActivity
                 .setQuery(ProductsRef.orderByChild("productState").equalTo("Approved"), Products.class)
                 .build();
 
-        FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
-                new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
+        FirebaseRecyclerAdapter<Products, ServiceViewHolder> adapter =
+                new FirebaseRecyclerAdapter<Products, ServiceViewHolder>(options) {
                     @Override
-                    protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Products model)
+                    protected void onBindViewHolder(@NonNull ServiceViewHolder holder, int position, @NonNull final Products model)
                     {
 
                         holder.txtProductName.setText(model.getPname());
                         /*holder.txtProductDescription.setText(model.getDescription());*/
-                        holder.txtProductPrice.setText("₱" + model.getPrice());
+                        holder.txtProductPrice.setText("₱ " + model.getPrice());
                        /* holder.txtProductCategory.setText("Category: " + model.getCategory());*/
                         Picasso.get().load(model.getImage()).into(holder.imageView);
 
@@ -207,10 +203,10 @@ public class HomeActivity extends AppCompatActivity
 
                     @NonNull
                     @Override
-                    public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+                    public ServiceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
                     {
-                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
-                        ProductViewHolder holder = new ProductViewHolder(view);
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.service_items_layout, parent, false);
+                        ServiceViewHolder holder = new ServiceViewHolder(view);
                         return  holder;
 
 

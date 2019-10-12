@@ -11,59 +11,61 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="165dp"
         android:background="@drawable/shadow_linear"
         android:padding="5dp">
-
-        <!--<TextView
-            android:id="@+id/cart_product_quantity"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="5dp"
-            android:text="Product Quantity"
-            android:textAlignment="textEnd"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:textSize="14dp"-->
-
-        />
 
         <TextView
             android:id="@+id/cart_product_name"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
+            android:layout_margin="3dp"
             android:text="Service Name: "
             android:textColor="@android:color/black"
-            android:textSize="20dp"
+            android:textSize="16dp"
             />
         <TextView
             android:id="@+id/cart_product_category"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
+            android:layout_margin="3dp"
             android:layout_below="@+id/cart_product_name"
             android:text="Service Category: "
             android:textColor="@android:color/black"
-            android:textSize="20dp"
+            android:textSize="16dp"
             />
         <TextView
         android:id="@+id/cart_product_seller_name"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cart_product_category"
+            android:layout_margin="3dp"
+            android:layout_below="@+id/cart_product_category"
         android:text="Service Provider: "
         android:textColor="@android:color/black"
-        android:textSize="20dp"
+        android:textSize="16dp"
         />
 
         <TextView
             android:id="@+id/cart_product_price"
             android:layout_width="380dp"
             android:layout_height="30dp"
+            android:layout_margin="3dp"
             android:layout_below="@+id/cart_product_seller_name"
             android:text="Service Price: "
             android:textColor="@android:color/black"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/cart_product_quantity"
+            android:layout_width="380dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_below="@+id/cart_product_price"
+            android:text="Number of hours: "
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+
+            />
 
     </RelativeLayout>
 

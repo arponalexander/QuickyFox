@@ -2,25 +2,21 @@
 <androidx.cardview.widget.CardView android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="15dp"
-    android:layout_marginEnd="15dp"
-    android:layout_marginLeft="10dp"
+    android:layout_margin="15dp"
     app:cardElevation="15dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/SmokeWhite">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="15dp"
         android:background="@drawable/shadow_linear"
         android:padding="5dp">
 
         <ImageView
             android:id="@+id/product_seller_image"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="160dp"
             android:layout_below="@+id/product_seller_state"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="2dp"
@@ -33,7 +29,7 @@
             android:layout_marginLeft="8dp"
             android:text="Service Status: "
             android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/product_seller_name"
@@ -43,7 +39,7 @@
             android:layout_marginLeft="8dp"
             android:text="Service Name: "
             android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/product_seller_price"
@@ -53,7 +49,7 @@
             android:layout_marginLeft="8dp"
             android:text="Service Price: "
             android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
 
         <!-- <TextView

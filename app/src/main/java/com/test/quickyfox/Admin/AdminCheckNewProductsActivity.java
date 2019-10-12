@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 import com.test.quickyfox.Model.Products;
 import com.test.quickyfox.R;
-import com.test.quickyfox.ViewHolder.ProductViewHolder;
+import com.test.quickyfox.ViewHolder.ServiceViewHolder;
 
 public class AdminCheckNewProductsActivity extends AppCompatActivity {
 
@@ -56,10 +56,10 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity {
                 .setQuery(unverifiedProductsRef.orderByChild("productState").equalTo("Not Approved"),Products.class)
                 .build();
 
-        final FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter = new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options)
+        final FirebaseRecyclerAdapter<Products, ServiceViewHolder> adapter = new FirebaseRecyclerAdapter<Products, ServiceViewHolder>(options)
         {
             @Override
-            protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Products model)
+            protected void onBindViewHolder(@NonNull ServiceViewHolder holder, int position, @NonNull final Products model)
             {
                 holder.txtProductName.setText(model.getPname());
                 /*holder.txtProductDescription.setText(model.getDescription());*/
@@ -106,10 +106,10 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity {
 
             @NonNull
             @Override
-            public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+            public ServiceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
             {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
-                ProductViewHolder holder = new ProductViewHolder(view);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.service_items_layout_list, parent, false);
+                ServiceViewHolder holder = new ServiceViewHolder(view);
                 return  holder;
             }
         };

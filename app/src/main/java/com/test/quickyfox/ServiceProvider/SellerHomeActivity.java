@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -20,22 +19,17 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
-import com.test.quickyfox.Admin.AdminCheckNewProductsActivity;
-import com.test.quickyfox.Buyers.HomeActivity;
 import com.test.quickyfox.Buyers.MainActivity;
 import com.test.quickyfox.Model.Products;
 import com.test.quickyfox.R;
 import com.test.quickyfox.ServiceProvider.BottomNavigationHome.SellerAddFragment;
 import com.test.quickyfox.ServiceProvider.BottomNavigationHome.SellerChatFragment;
 import com.test.quickyfox.ServiceProvider.BottomNavigationHome.SellerHomeFragment;
-import com.test.quickyfox.ViewHolder.ItemViewHolder;
-import com.test.quickyfox.ViewHolder.ProductViewHolder;
+import com.test.quickyfox.ViewHolder.ServiceProviderItemViewHolder;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -160,10 +154,10 @@ public class SellerHomeActivity extends AppCompatActivity {
                 .setQuery(unverifiedProductsRef.orderByChild("sid").equalTo(FirebaseAuth.getInstance().getCurrentUser().getUid()),Products.class)
                 .build();
 
-        final FirebaseRecyclerAdapter<Products, ItemViewHolder> adapter = new FirebaseRecyclerAdapter<Products, ItemViewHolder>(options)
+        final FirebaseRecyclerAdapter<Products, ServiceProviderItemViewHolder> adapter = new FirebaseRecyclerAdapter<Products, ServiceProviderItemViewHolder>(options)
         {
             @Override
-            protected void onBindViewHolder(@NonNull ItemViewHolder holder, int position, @NonNull final Products model)
+            protected void onBindViewHolder(@NonNull ServiceProviderItemViewHolder holder, int position, @NonNull final Products model)
             {
                 holder.txtProductName.setText(model.getPname());
                 /*holder.txtProductDescription.setText(model.getDescription());*/
@@ -212,10 +206,10 @@ public class SellerHomeActivity extends AppCompatActivity {
 
             @NonNull
             @Override
-            public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+            public ServiceProviderItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
             {
                 View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_seller_item_view, parent, false);
-                ItemViewHolder holder = new ItemViewHolder(view);
+                ServiceProviderItemViewHolder holder = new ServiceProviderItemViewHolder(view);
                 return  holder;
             }
         };

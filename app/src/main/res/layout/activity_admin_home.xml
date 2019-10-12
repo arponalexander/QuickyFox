@@ -12,7 +12,7 @@
         android:layout_height="386dp"
         android:layout_above="@+id/admin_check_service_provider_btn"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/foxicon" />
+        android:src="@drawable/foxworklogo" />
 
     <Button
         android:id="@+id/admin_maintain_btn"

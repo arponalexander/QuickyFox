@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shadow_linear"
+    android:padding="5dp"
+    tools:context=".Buyers.ProductDetailsActivity">
+
+
+    <ScrollView
+        android:id="@+id/scroll_service_detail"
+        android:layout_above="@+id/linear_layout_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+        <ImageView
+            android:id="@+id/product_image_details"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:fadingEdge="horizontal"
+            android:layout_height="250dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/linear_detail_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/product_image_details">
+
+            <TextView
+                android:id="@+id/txt_product_name_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: "
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/product_name_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_detail_2"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_detail_1">
+
+            <TextView
+                android:id="@+id/txt_product_seller_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Provider: "
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/product_seller_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_detail_3"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_detail_2">
+
+            <TextView
+                android:id="@+id/txt_product_category_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category: "
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/product_category_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_detail_5"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_detail_4">
+
+            <TextView
+                android:id="@+id/txt_product_price_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price per Hour: "
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/product_price_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:id="@+id/number_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_detail_5"
+                android:layout_marginTop="50dp"
+                android:layout_centerInParent="true"
+                android:elevation="4dp"
+                android:padding="5dp"
+                app:finalNumber="8"
+                app:initialNumber="1"
+                app:textSize="10sp"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/linear_detail_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/linear_detail_3">
+
+            <TextView
+                android:id="@+id/txt_product_description_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/product_description_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_product_description_details"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+
+
+        </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_product"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/pd_add_to_cart_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shadow_linear"
+            android:padding="10dp"
+            android:text="Hire Service"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
